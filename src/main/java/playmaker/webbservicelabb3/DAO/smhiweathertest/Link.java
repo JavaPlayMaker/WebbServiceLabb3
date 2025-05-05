@@ -1,5 +1,5 @@
 
-package playmaker.webbservicelabb3.DAO.smhiweather;
+package playmaker.webbservicelabb3.DAO.smhiweathertest;
 
 import com.fasterxml.jackson.annotation.*;
 import jakarta.annotation.Generated;
