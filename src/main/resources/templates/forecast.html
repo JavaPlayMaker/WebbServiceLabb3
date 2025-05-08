@@ -2,34 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>SMHI Forecast</title>
+    <title>Forecast</title>
 </head>
 <body>
-<h2>SMHI Forecast Data</h2>
-
-<p><strong>Type:</strong> <span th:text="${forecast.geometry.type}"></span></p>
-<p><strong>Approved Time:</strong> <span th:text="${forecast.approvedTime}"></span></p>
-<p><strong>Reference Time:</strong> <span th:text="${forecast.referenceTime}"></span></p>
-
-<h3>Geometry</h3>
-<p><strong>Coordinates:</strong>
-    <span th:each="coord : ${forecast.geometry.coordinates}" th:text="${coord}"></span>
-</p>
-
-<h3>Time Series</h3>
-<div th:each="ts : ${forecast.timeSeries}">
-    <p><strong>Valid Time:</strong> <span th:text="${ts.validTime}"></span></p>
-
-    <div th:each="param : ${ts.parameters}">
-        <p>— <strong>Level Type:</strong> <span th:text="${param.levelType}"></span></p>
-        <p>— <strong>Level:</strong> <span th:text="${param.level}"></span></p>
-        <p>— <strong>Unit:</strong> <span th:text="${param.unit}"></span></p>
-        <p>— <strong>Values:</strong>
-            <span th:each="val : ${param.values}" th:text="${val}"></span>
-        </p>
-        <hr/>
-    </div>
-</div>
+<h2>Best forecast for today</h2>
+<p th:text="'Temperature: ' + ${forecast}"></p>
+<p th:text="'Humidity: ' + ${forecast}"></p>
+<p th:text="'Wind Speed: ' + ${forecast}"></p>
+<p th:text="'Condition: ' + ${forecast}"></p>
+<p th:text="'Forecast: ' + ${forecast}"></p>
+<p th:text="'Location: ' + ${forecast}"></p>
+<p th:text="'Date: ' + ${forecast}"></p>
+<p th:text="'Time: ' + ${forecast}"></p>
+<p th:text="'Weather: ' + ${forecast}"></p>
 
 </body>
 </html>
