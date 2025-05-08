@@ -17,8 +17,7 @@ public class ForecastWebController {
 
     @GetMapping("/forecast")
     public String showForecast(Model model) {
-        model.addAttribute("forecast", forecastService.getBestForecast());
-
+        model.addAttribute("forecast", forecastService.getBestForecastLocationLiljeholmen());
         return "forecast";
     }
 }

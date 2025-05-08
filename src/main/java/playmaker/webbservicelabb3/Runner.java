@@ -12,25 +12,15 @@ public class Runner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+        WebClient webClient = WebClient.builder().build();
 
-        WebClient webClientSmhi = WebClient.create();
-        WebClient webClientTest = WebClient.create();
-
-        Mono<String> smhiResponse = webClientSmhi.get()
-                .uri("https://api.smhi.se/v1/parameter")
+        Mono<String> forecastSMHIResponse = webClient.get()
+                .uri("https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/18.0300/lat/59.3110/data.json")
                 .retrieve()
                 .bodyToMono(String.class);
 
-        smhiResponse.subscribe(response -> {
-            System.out.println("SMHI Response: " + response);
-        });
-        Mono<String> TestResponse = webClientTest.get()
-                .uri("https://api.yr.no/weatherapi/locationforecast/2.0/compact?lat=60.10&lon=9.58")
-                .retrieve()
-                .bodyToMono(String.class);
-
-        TestResponse.subscribe(response -> {
-            System.out.println("Test Response: " + response);
+        forecastSMHIResponse.subscribe(response -> {
+            System.out.println("Local SMHI Response: " + response);
         });
     }
 }
