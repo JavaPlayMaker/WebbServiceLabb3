@@ -1,5 +1,5 @@
-package playmaker.webbservicelabb3.DAO.smhiweathertest;
 
+package playmaker.webbservicelabb3.DAO.MET;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -13,37 +13,24 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "type",
-        "properties"
+    "details"
 })
 @Generated("jsonschema2pojo")
-public class Example {
+public class Instant {
 
-    @JsonProperty("type")
-    private String type;
-    @JsonProperty("properties")
-    private Properties properties;
+    @JsonProperty("details")
+    private Details details;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
-    @JsonProperty("type")
-    public String getType() {
-        return type;
+    @JsonProperty("details")
+    public Details getDetails() {
+        return details;
     }
 
-    @JsonProperty("type")
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    @JsonProperty("properties")
-    public Properties getProperties() {
-        return properties;
-    }
-
-    @JsonProperty("properties")
-    public void setProperties(Properties properties) {
-        this.properties = properties;
+    @JsonProperty("details")
+    public void setDetails(Details details) {
+        this.details = details;
     }
 
     @JsonAnyGetter

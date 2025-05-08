@@ -1,7 +1,8 @@
-package playmaker.webbservicelabb3.DAO.smhiweathertest;
 
+package playmaker.webbservicelabb3.DAO.MET;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import javax.annotation.Generated;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
@@ -13,50 +14,37 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "foo",
-        "bar",
-        "baz"
+    "type",
+    "coordinates"
 })
 @Generated("jsonschema2pojo")
-public class Properties {
+public class Geometry {
 
-    @JsonProperty("foo")
-    private Foo foo;
-    @JsonProperty("bar")
-    private Bar bar;
-    @JsonProperty("baz")
-    private Baz baz;
+    @JsonProperty("type")
+    private String type;
+    @JsonProperty("coordinates")
+    private List<Double> coordinates;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
-    @JsonProperty("foo")
-    public Foo getFoo() {
-        return foo;
+    @JsonProperty("type")
+    public String getType() {
+        return type;
     }
 
-    @JsonProperty("foo")
-    public void setFoo(Foo foo) {
-        this.foo = foo;
+    @JsonProperty("type")
+    public void setType(String type) {
+        this.type = type;
     }
 
-    @JsonProperty("bar")
-    public Bar getBar() {
-        return bar;
+    @JsonProperty("coordinates")
+    public List<Double> getCoordinates() {
+        return coordinates;
     }
 
-    @JsonProperty("bar")
-    public void setBar(Bar bar) {
-        this.bar = bar;
-    }
-
-    @JsonProperty("baz")
-    public Baz getBaz() {
-        return baz;
-    }
-
-    @JsonProperty("baz")
-    public void setBaz(Baz baz) {
-        this.baz = baz;
+    @JsonProperty("coordinates")
+    public void setCoordinates(List<Double> coordinates) {
+        this.coordinates = coordinates;
     }
 
     @JsonAnyGetter
