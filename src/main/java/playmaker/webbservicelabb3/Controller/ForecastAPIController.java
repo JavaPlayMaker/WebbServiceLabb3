@@ -14,11 +14,20 @@ public class ForecastAPIController {
     public ForecastAPIController(ForecastService forecastService) {
         this.forecastService = forecastService;
     }
-    @GetMapping("/forecast")
+
+    @GetMapping("/forecast/SMHI")
     public ResponseEntity<String> getForecast() {
-        String forecast = forecastService.getBestForecastLocationLiljeholmen();
-        return ResponseEntity.ok(forecast);
+        String smhiForecast = forecastService.getSMHIData().toString();
+        return ResponseEntity.ok("SMHI Forecast: " + smhiForecast);
+    }
+    /*
+    @GetMapping("/forecast/MET")
+    public ResponseEntity<String> getForecastMET() {
+        String metForecast = forecastService.getMETData().toString();
+        return ResponseEntity.ok("MET Forecast: " + metForecast);
+
     }
 
+     */
 }
 

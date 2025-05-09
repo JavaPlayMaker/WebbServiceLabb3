@@ -6,15 +6,9 @@
 </head>
 <body>
 <h2>Best forecast for today</h2>
-<p th:text="'Temperature: ' + ${forecast}"></p>
-<p th:text="'Humidity: ' + ${forecast}"></p>
-<p th:text="'Wind Speed: ' + ${forecast}"></p>
-<p th:text="'Condition: ' + ${forecast}"></p>
-<p th:text="'Forecast: ' + ${forecast}"></p>
-<p th:text="'Location: ' + ${forecast}"></p>
-<p th:text="'Date: ' + ${forecast}"></p>
-<p th:text="'Time: ' + ${forecast}"></p>
-<p th:text="'Weather: ' + ${forecast}"></p>
+
+<h3>SMHI Forecast</h3>
+<p th:text="'Temperature: ' + ${smhiData.temperature} + ' °C'"></p>
 
 </body>
 </html>

@@ -1,6 +1,5 @@
 package playmaker.webbservicelabb3.Controller;
 
-import lombok.experimental.NonFinal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +16,11 @@ public class ForecastWebController {
 
     @GetMapping("/forecast")
     public String showForecast(Model model) {
-        model.addAttribute("forecast", forecastService.getBestForecastLocationLiljeholmen());
+        model.addAttribute("smhiData", forecastService.getSMHIData());
+        /*
+        model.addAttribute("metData", forecastService.getMETData());
+
+         */
         return "forecast";
     }
 }
