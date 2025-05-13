@@ -9,26 +9,10 @@
 
 <h3>SMHI Forecast</h3>
 <div>
-    <p>Approved Time: <span th:text="${smhiData.approvedTime}"></span></p>
-    <p>Reference Time: <span th:text="${smhiData.referenceTime}"></span></p>
-    <h4>Geometry</h4>
-    <p>Type: <span th:text="${smhiData.geometry.type}"></span></p>
-    <p>Coordinates: <span th:text="${smhiData.geometry.coordinates}"></span></p>
-    <h4>Time Series</h4>
-    <ul>
-        <li th:each="timeSeries : ${smhiData.timeSeries}">
-            <p>Valid Time: <span th:text="${timeSeries.validTime}"></span></p>
-            <ul>
-                <li th:each="parameter : ${timeSeries.parameters}">
-                    <p>Name: <span th:text="${parameter.name}"></span></p>
-                    <p>Level Type: <span th:text="${parameter.levelType}"></span></p>
-                    <p>Level: <span th:text="${parameter.level}"></span></p>
-                    <p>Unit: <span th:text="${parameter.unit}"></span></p>
-                    <p>Values: <span th:text="${parameter.values}"></span></p>
-                </li>
-            </ul>
-        </li>
-    </ul>
+    <p>  <span th:text="${smhiData}"></span></p>
+    <p>  <span th:text="${metData}"></span></p>
+
+
 </div>
 
 </body>
