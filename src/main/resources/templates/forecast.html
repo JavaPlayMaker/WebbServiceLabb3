@@ -3,17 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Forecast</title>
+    <link rel="stylesheet" href="/CSS/forecast.css">
+    <link rel="stylesheet" href="/Weather.png">
 </head>
 <body>
 <h2>Best forecast for today</h2>
 
-<h3>SMHI Forecast</h3>
 <div>
-    <p>  <span th:text="${smhiData}"></span></p>
-    <p>  <span th:text="${metData}"></span></p>
+<div class="forecast-container">
+    <h3>SMHI</h3>
+    <span class="smhi-data" th:text="${smhiData}"></span>
+</div>
+
+<div class="forecast-container">
+    <h3>MET</h3>
+    <span class="met-data" th:text="${metData}"></span>
+</div>
+<div>
 
 
 </div>
 
+
+
 </body>
+
+
 </html>
