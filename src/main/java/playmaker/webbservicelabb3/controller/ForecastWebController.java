@@ -17,10 +17,7 @@ public class ForecastWebController {
     public String showForecast(Model model) {
         model.addAttribute("smhiData", forecastService.getSMHIData());
         model.addAttribute("metData", forecastService.getMETData());
-
-
-
-
+        model.addAttribute("meteoData", forecastService.getMETEOData());
 
         return "forecast";
     }

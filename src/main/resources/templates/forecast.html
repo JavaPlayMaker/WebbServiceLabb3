@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="">
 <head>
     <meta charset="UTF-8">
     <title>Forecast</title>
@@ -10,23 +10,20 @@
 <h2>Best forecast for today</h2>
 
 <div>
-<div class="forecast-container">
-    <h3>SMHI</h3>
-    <span class="smhi-data" th:text="${smhiData}"></span>
-</div>
+    <div class="forecast-container">
+        <h3>SMHI</h3>
+        <span class="smhi-data" th:text="${smhiData}"></span>
+    </div>
 
-<div class="forecast-container">
-    <h3>MET</h3>
-    <span class="met-data" th:text="${metData}"></span>
-</div>
-<div>
-
-
-</div>
-
+    <div class="forecast-container">
+        <h3>MET</h3>
+        <span class="met-data" th:text="${metData}"></span>
+    </div>
+    <div class="forecast-container">
+        <h3>METEO</h3>
+        <span class="meteo-data" th:text="${meteoData}"></span>
+    </div>
 
 
 </body>
-
-
 </html>

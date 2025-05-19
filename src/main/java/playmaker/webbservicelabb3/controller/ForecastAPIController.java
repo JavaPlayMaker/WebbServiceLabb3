@@ -29,7 +29,11 @@ public class ForecastAPIController {
 
 
     }
-
+    @GetMapping("/forecast/METEO")
+    public ResponseEntity<String> getForecastMETEO() {
+        String meteoForecast = forecastService.getMETEOData().toString();
+        return ResponseEntity.ok("METEO Forecast: " + meteoForecast);
+    }
 
 }
 

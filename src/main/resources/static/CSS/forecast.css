@@ -16,21 +16,19 @@
     background-color: #f9f9f9;
 }
 
-    body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        background-color: #FAEBD7;
-    }
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #FAEBD7;
+}
 
-    h2 {
-        color: #333;
-    }
+h2 {
+    color: #333;
+}
 
-    h3 {
-        color: #555;
-    }
-
-
+h3 {
+    color: #555;
+}
 
 
 .smhi-data {
@@ -44,3 +42,10 @@
     margin-top: 10px;
     color: #28A745;
 }
+
+.meteo-data {
+    display: block;
+    margin-top: 10px;
+    color: #17A2B8;
+}
+
